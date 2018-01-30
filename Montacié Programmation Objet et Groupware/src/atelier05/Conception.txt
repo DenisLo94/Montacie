@@ -1,0 +1,28 @@
+Classe Etudiant
+Attributs
+Nom String
+Prenoms String
+Numéro unsigned long
+Naissance Date
+INE String
+Photo Icon 
+Interface publique
+Constructeur non vide
+	Etudiant(String, String, unsigned long, Date, String, Icon)
+	Accesseurs en lecture
+	String getNom()
+	String getPrenoms()
+	...
+	Afficher()
+	ComparerAnnee(Etudiant e)
+
+Classe Promotion
+Attributs
+Etudiant[] Eleves
+Annee short
+Formation String
+Interface publique
+Constructeur non vide Formation(short, String)
+ajouter(Etudiant e)
+supprimer(Etudiant e)
+int nombre ()
