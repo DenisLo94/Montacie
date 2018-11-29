@@ -13,8 +13,6 @@ import java.util.*;
 /**
  * @author montacie
  *
- * Pour changer le mod�le de ce commentaire de type g�n�r�, allez � :
- * Fen�tre&gt;Pr�f�rences&gt;Java&gt;G�n�ration de code&gt;Code et commentaires
  */
 public class Keyboard {
 	private static String[] Lire (String mess) {
