@@ -24,6 +24,10 @@ public LireToutUnTexte(File ft) {
 	catch (IOException e) { e.printStackTrace(); }
 }
 
+public void Afficher() {
+	System.out.println(Stexte);
+}
+
 /** Recherche du nombre d'occurences de s dans sTexte
 * @param s chaîne cherchée
 * @return nombre d'occurences
