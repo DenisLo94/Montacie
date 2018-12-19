@@ -10,44 +10,38 @@ import java.awt.Container;
 import java.awt.GridLayout;
 
 public class MultiFenetre {
-	private JFrame fen; 
-	private Container jp;
-	private JTextPane fen1, fen2;
+	private JFrame frame;
+	private JTextPane[] fen;
 	private JPanel pan;
-	
-	public MultiFenetre() {
-		fen = new JFrame("MultiFenetre");
-		fen.setSize(400, 500);
-		jp = fen.getContentPane();
+
+	public MultiFenetre(int nFen) {
+		frame = new JFrame("MultiFenetre");
+		frame.setSize(nFen * 200, 500);
 		pan = new JPanel();
-		pan.setLayout(new GridLayout(1,2));
-		fen1 = new JTextPane();
-		//fen1.add(new JScrollPane(fen1));
-		fen2 = new JTextPane();
-		pan.add(fen1);
-		pan.add(fen2);
-		jp.add(pan);	
-		
+		pan.setLayout(new GridLayout(1, nFen));
+		fen = new JTextPane[nFen];
+		for (int i = 0; i < nFen; i++) {
+			fen[i] = new JTextPane();
+			pan.add(fen[i]);
+		}
+		frame.getContentPane().add(pan);
+
 	}
 
-	public void afficher1(String nomFichier) {
+	public void afficherdoc(String nomFichier, int iFen) {
 		// lecture du document
 		try {
-			fen1.read(new FileReader(nomFichier), null);
+
+			fen[iFen].read(new FileReader(nomFichier), null);
+
 		} catch (IOException e) {
 		}
-		fen.setVisible(true);
-
+		frame.setVisible(true);
 	}
-	
-	public void afficher2(String nomFichier) {
-		// lecture du document
-		try {
-			fen2.read(new FileReader(nomFichier), null);
-		} catch (IOException e) {
-		}
-		fen.setVisible(true);
 
+	public void affichertxt(String texte, int iFen) {
+		fen[iFen].setText(texte);
+		frame.setVisible(true);
 	}
 
 }

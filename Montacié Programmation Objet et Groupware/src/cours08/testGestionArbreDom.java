@@ -8,7 +8,7 @@ import java.io.*;
 public class testGestionArbreDom {
 
 	public static void main(String[] args) {
-		File fxml = new File("xml/article.xml");
+		File fxml = new File("livres/hamlet.xml");
 		FileInputStream isxml = null;
 		try {
 			isxml = new FileInputStream(fxml);

@@ -3,13 +3,11 @@ package atelier12;
 public class testMultiFenetre {
 
 	public static void main(String[] args) {
-		
-		String nomFichier = "livres/avare.txt";
-		MultiFenetre mf = new MultiFenetre();
-		mf.afficher1(nomFichier);
-		mf.afficher2(nomFichier);
-		
+	
 
+		MultiFenetre mf = new MultiFenetre(2);
+		mf.afficherdoc("livres/avare.txt",0);
+		mf.affichertxt("livres/adolphe.txt",1);
 	}
 
 }
