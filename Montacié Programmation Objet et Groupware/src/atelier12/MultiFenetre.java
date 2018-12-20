@@ -17,7 +17,7 @@ public class MultiFenetre {
 
 	public MultiFenetre(int nFen) {
 		frame = new JFrame("MultiFenetre");
-		frBadLocationExceptioame.setSize(nFen * 200, 500);
+		frame.setSize(nFen * 200, 500);
 		pan = new JPanel();
 		pan.setLayout(new GridLayout(1, nFen));
 		fen = new JTextPane[nFen];
