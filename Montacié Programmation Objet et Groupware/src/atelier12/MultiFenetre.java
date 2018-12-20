@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.awt.Container;
 import java.awt.GridLayout;
+import javax.swing.text.Document;
 
 public class MultiFenetre {
 	private JFrame frame;
@@ -16,7 +17,7 @@ public class MultiFenetre {
 
 	public MultiFenetre(int nFen) {
 		frame = new JFrame("MultiFenetre");
-		frame.setSize(nFen * 200, 500);
+		frBadLocationExceptioame.setSize(nFen * 200, 500);
 		pan = new JPanel();
 		pan.setLayout(new GridLayout(1, nFen));
 		fen = new JTextPane[nFen];
@@ -44,4 +45,7 @@ public class MultiFenetre {
 		frame.setVisible(true);
 	}
 
+	public Document get(int iFen) {
+		return fen[iFen].getDocument();
+	}
 }
