@@ -1,0 +1,90 @@
+Ex 4a.
+
+Méthode Brutale : 24
+
+Madame 
+de 
+Hautcastel 
+arrangea 
+commodément 
+sa 
+jolie 
+tête 
+sur 
+le 
+dossier 
+de 
+son 
+fauteuil; 
+chacun 
+fit 
+silence 
+et 
+le 
+baron 
+parla 
+en 
+ces 
+termes:
+
+Méthode par regex : 26
+
+Madame 
+de 
+Hautcastel 
+arrangea 
+commodément 
+sa 
+jolie 
+tête 
+sur 
+le 
+dossier 
+de 
+son 
+fauteuil
+; 
+chacun 
+fit 
+silence 
+et 
+le 
+baron 
+parla 
+en 
+ces 
+termes
+:
+
+Ex 4b.
+
+Algo du pseudocode :
+
+string text = gettext(); # obtient le text d'un fichier.
+
+char[] tokeniser(string text){
+	char [] tokens = []; 
+	string buffer = ""; # string vide
+	for char in text:
+		if char not in [" ", "\n", "\t"]:
+			buffer = buffer + char;
+		else : 
+			tokens.push(buffer);
+			buffer = "";
+	return tokens;
+}
+
+Ex 4c.
+
+hello,
+le
+soleil
+brille,
+brille
+aujourd’hui… 
+
+Ex 4d.
+
+l'influence de l'encodage est que la lettre ê est reconnue par le regex qui matche les symboles non-alphanumérique si on n'a pas bien spécifié l'encodage. Par conséquence, cela deviendra un marqueur de séparation. Si ê est bien encodé, on n'aura pas ce problème.
+
+
