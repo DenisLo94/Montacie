@@ -12,6 +12,7 @@ public class nbJoursDepuis {
 		System.out.print("le nombre de jours depuis ");
 		dt.Afficher();
 		do {
+			//dt.Afficher();
 			nbJours++;
 		    dt.Incrementer();
 		}
